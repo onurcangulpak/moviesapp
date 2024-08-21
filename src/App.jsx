@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import MoviesPage from './pages/MoviesPage';
 import AboutUs from './pages/AboutUs';
 import OneMovie from './pages/OneMovie';
+import NotFound from './pages/NotFound';
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
       <Route path='/' element={<HomePage/>}/> 
       <Route path='/allmovies' element={<MoviesPage/>}/> 
       <Route path='/movies/:id' element={<OneMovie/>}/>
-      <Route path='/aboutus' element={<AboutUs/>}/> 
+      <Route path='/aboutus' element={<AboutUs/>}/>
+      <Route path='*' element={<NotFound />} />
 
 
 </Routes>

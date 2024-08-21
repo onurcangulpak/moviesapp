@@ -1,0 +1,18 @@
+.not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .not-found img {
+    max-width: 80%;
+    height: auto;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+  }
+  

@@ -7,15 +7,15 @@
     padding: 20px;
     margin: 20px auto;
     max-width: 600px;
-    background-color: #1c1c1c; /* Dark background */
-    color: #e0e0e0; /* Light text color */
+    background-color: #1c1c1c; 
+    color: #e0e0e0;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   }
   
   .movie-details img {
     width: 100%;
-    max-width: 250px; /* Smaller image */
+    max-width: 250px; 
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -24,19 +24,19 @@
   .movie-details h1 {
     font-size: 2rem;
     margin: 10px 0;
-    color: #ff4d4d; /* Dark red color */
+    color: #ff4d4d; 
   }
   
   .movie-details h2 {
     font-size: 1.25rem;
     margin: 5px 0;
-    color: #ff6666; /* Slightly lighter dark red color */
+    color: #ff6666; 
   }
   
   .movie-details p {
     font-size: 1rem;
     margin: 5px 0;
-    color: #d0d0d0; /* Light grey color for text */
+    color: #d0d0d0;
   }
   
   .movie-details .movie-categories,

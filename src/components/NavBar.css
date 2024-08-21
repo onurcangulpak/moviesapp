@@ -4,6 +4,10 @@
     display: flex; 
     align-items: center;
     border-bottom: black solid 1px;
+    position: sticky; 
+    top: 0;
+    width: 100%; 
+    z-index: 1000;
   }
   
   .nav-bar ul {
