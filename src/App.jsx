@@ -7,6 +7,7 @@ import MoviesPage from './pages/MoviesPage';
 import AboutUs from './pages/AboutUs';
 import OneMovie from './pages/OneMovie';
 import NotFound from './pages/NotFound';
+import AddReview from './components/AddReview';
 
 
 function App() {
