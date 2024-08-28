@@ -1,0 +1,9 @@
+.add-review-container { 
+    border: solid blue 5px;
+    display: flex;
+    flex-direction: column;
+}
+.add-review-container form { 
+    display: flex;
+    flex-direction: column;
+}

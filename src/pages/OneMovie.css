@@ -1,59 +1,78 @@
-
 .movie-details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    margin: 0;
-    width: 100%; 
-    height: 100vh;
-    max-width: auto;
-    background-color: #1c1c1c; 
-    color: #e0e0e0;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-    box-shadow: none; 
-    box-sizing: border-box; 
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 0;
+  width: max-content;
+  background-color: #190101;
+  color: #e0e0e0;
+  box-shadow: 0 0 15px rgba(64, 60, 60, 0.482);
+  margin-right: 200px;
+  border-radius: 8px;
+  margin-top: 30px;
+
+}
+.one-movie-container { 
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+  border: solid red 2px;
+
   
-  .movie-details img {
-    width: 100%;
-    max-width: 250px; 
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  }
-  
-  .movie-details h1 {
-    font-size: 2rem;
-    margin: 10px 0;
-    color: #ff4d4d; 
-  }
-  
-  .movie-details h2 {
-    font-size: 1.25rem;
-    margin: 5px 0;
-    color: #ff6666; 
-  }
-  
-  .movie-details p {
-    font-size: 1rem;
-    margin: 5px 0;
-    color: #d0d0d0;
-  }
-  
-  .movie-details .movie-categories,
-  .movie-details .movie-artists {
-    font-style: italic;
-  }
-  
-  .loading, .error {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #ff4d4d; 
-    padding: 20px;
-  }
-  
-  .error {
-    color: #ff4d4d;
-  }
-  
+}
+
+.review-section { 
+  border: solid rgb(0, 255, 89) 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #190101;
+  border-radius: 8px;
+  margin-top: 30px;
+  gap: 100px
+
+}
+.movie-details img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.movie-details h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #ff4d4d;
+}
+
+.movie-details h2 {
+  font-size: 1.25rem;
+  margin: 5px 0;
+  color: #ff6666;
+}
+
+.movie-details p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #d0d0d0;
+}
+
+.movie-details .movie-categories,
+.movie-details .movie-artists {
+  font-style: italic;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ff4d4d;
+  padding: 20px;
+}
+
+.error {
+  color: #ff4d4d;
+}
+

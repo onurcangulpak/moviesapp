@@ -1,30 +1,47 @@
 import React, { useState } from "react";
+import axios from "axios";
+import "./AddReview.css";
 
 const AddReview = ({ movieId, addReview }) => {
   const [reviewText, setReviewText] = useState("");
   const [rating, setRating] = useState("");
   const [reviewerName, setReviewerName] = useState("");
+  const [error, setError] = useState(null);
 
-  //handle submit
-
-  const handleSubmit = (e) => {
+  // handleSubmit as an async function
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const newReview = {
       movieId,
       reviewText,
-      rating,
+      rating: parseInt(rating, 10),
       reviewerName,
     };
-    addReview(newReview);
-    setReviewText("");
-    setRating("");
-    setReviewerName("");
+
+    try {
+      //POST request to add review
+      const response = await axios.post(
+        "http://localhost:5005/reviews",
+        newReview
+      );
+      if (response.data) {
+        // addReview callback to update the parent component
+        addReview(response.data);
+        setReviewText("");
+        setRating("");
+        setReviewerName("");
+      }
+    } catch (error) {
+      console.error("Failed to add review", error);
+      setError("Failed to add review. Please try again.");
+    }
   };
 
   return (
     <div className="add-review-container">
-      <h3> Add review</h3>
+      <h3>Add Review</h3>
+      {error && <p style={{ color: "red" }}>{error}</p>}
       <form onSubmit={handleSubmit}>
         <label>
           Your Name:
@@ -32,6 +49,7 @@ const AddReview = ({ movieId, addReview }) => {
             type="text"
             value={reviewerName}
             onChange={(e) => setReviewerName(e.target.value)}
+            required
           />
         </label>
 
@@ -43,15 +61,19 @@ const AddReview = ({ movieId, addReview }) => {
             max="5"
             value={rating}
             onChange={(e) => setRating(e.target.value)}
+            required
           />
         </label>
+
         <label>
-          Review:{" "}
+          Review:
           <textarea
             value={reviewText}
             onChange={(e) => setReviewText(e.target.value)}
+            required
           ></textarea>
         </label>
+
         <button type="submit">Send Review</button>
       </form>
     </div>

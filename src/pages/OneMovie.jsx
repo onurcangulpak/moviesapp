@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./OneMovie.css";
 import AddReview from "../components/AddReview";
+import ReviewList from "../components/ReviewList";
 
 const OneMovie = () => {
   const { id } = useParams();
@@ -13,22 +14,31 @@ const OneMovie = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:5005/movies/${id}`)
-      .then((response) => {
-        if (response.data) {
-          setMovie(response.data);
+    const fetchMovieData = async () => {
+      try {
+        const movieResponse = await axios.get(
+          `http://localhost:5005/movies/${id}`
+        );
+        const reviewsResponse = await axios.get(
+          `http://localhost:5005/reviews?movieId=${id}`
+        );
+
+        if (movieResponse.data) {
+          setMovie(movieResponse.data);
+          setReviews(reviewsResponse.data); // Set the fetched reviews
         } else {
           navigate("/notfound");
         }
-        setLoading(false);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.log("Error while getting the movie", error);
         setError("Failed to load movie details.");
-        setLoading(false);
         navigate("/notfound");
-      });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMovieData();
   }, [id, navigate]);
 
   const addReview = (review) => {
@@ -44,7 +54,8 @@ const OneMovie = () => {
   }
 
   return (
-    <div className="movie-container">
+    <div className="one-movie-container">
+      
       <div className="movie-details">
         <img src={movie.image} alt={movie.title} className="movie-image" />
         <h2>
@@ -54,23 +65,16 @@ const OneMovie = () => {
         <p>IMDB Rating: {movie.imdbRating}</p>
         <p>Artists: {movie.artists.join(", ")}</p>
         <p>Description: {movie.description}</p>
-        <AddReview movieId={movie.id} addReview={addReview} />
-        <div className="reviews-section">
-          <h3> Reviews</h3>
-          {reviews.length === 0 ? (
-            <p>No reviews yet.</p>
-          ) : (
-            reviews.map((review, index) => (
-              <div key={index} className="review">
-                <h4>
-                  {review.reviewerName} - {review.rating}/5
-                </h4>
-                <p>{review.reviewText}</p>
-              </div>
-            ))
-          )}
-        </div>
+        
       </div>
+
+      <div className="review-section"> 
+      <div className="rc-review-list"> <ReviewList reviews={reviews} /> </div>
+      <div className="rc-add-review">  <AddReview movieId={movie.id} addReview={addReview} /></div>
+     
+     
+      </div>
+      
     </div>
   );
 };
