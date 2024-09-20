@@ -7,17 +7,18 @@ const MoviesPage = () => {
 
 
 const [movies,setMovies]= useState([])
-
+// Get movies from db
 useEffect(()=>{ 
   axios.get('http://localhost:5005/movies')
   .then(response=> { 
     setMovies(response.data)
   })
   .catch (error=> { 
-    console.log("Error while getting the movies")
+    console.log("Error while getting the movies",error)
   })
 },[])
 
+// no movies loading
 if (movies.length === 0) { 
   return <div>Loading...</div>;
 }

@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./OneMovie.css";
 import AddReview from "../components/AddReview";
-import ReviewList from "../components/ReviewList";
 
 const OneMovie = () => {
   const { id } = useParams();
@@ -25,7 +24,7 @@ const OneMovie = () => {
 
         if (movieResponse.data) {
           setMovie(movieResponse.data);
-          setReviews(reviewsResponse.data); // Set the fetched reviews
+          setReviews(reviewsResponse.data);
         } else {
           navigate("/notfound");
         }
@@ -55,26 +54,33 @@ const OneMovie = () => {
 
   return (
     <div className="one-movie-container">
-      
       <div className="movie-details">
+        <div className="movie-details-img"> 
         <img src={movie.image} alt={movie.title} className="movie-image" />
+        </div> 
+        <div className="mv-details"> 
         <h2>
           {movie.title} ({movie.year})
         </h2>
-        <p>Categories: {movie.categories.join(", ")}</p>
-        <p>IMDB Rating: {movie.imdbRating}</p>
-        <p>Artists: {movie.artists.join(", ")}</p>
-        <p>Description: {movie.description}</p>
-        
-      </div>
+        <p><b>Categories:</b> {movie.categories.join(", ")}</p>
+        <p><b>IMDB Rating:</b> {movie.imdbRating}</p>
+        <p><b>Artists:</b> {movie.artists.join(", ")}</p>
+        <p><b>Description:</b> {movie.description}</p>
+        </div>
+        </div>
+       
+  
 
-      <div className="review-section"> 
-      <div className="rc-review-list"> <ReviewList reviews={reviews} /> </div>
-      <div className="rc-add-review">  <AddReview movieId={movie.id} addReview={addReview} /></div>
-     
-     
+      <div className="review-section">
+        <div className="rc-add-review">
+          {" "}
+          <AddReview
+            movieId={movie.id}
+            reviews={reviews}
+            addReview={addReview}
+          />
+        </div>
       </div>
-      
     </div>
   );
 };

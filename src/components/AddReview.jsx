@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./AddReview.css";
 
-const AddReview = ({ movieId, addReview }) => {
+const AddReview = ({ movieId, addReview, reviews }) => {
   const [reviewText, setReviewText] = useState("");
   const [rating, setRating] = useState("");
   const [reviewerName, setReviewerName] = useState("");
@@ -38,12 +38,41 @@ const AddReview = ({ movieId, addReview }) => {
     }
   };
 
+  // checking if the reviewText is lower or equal to 125
+  const handleReviewTextChange = (e) => {
+    if (e.target.value.length <= 125) {
+      setReviewText(e.target.value);
+    }
+  };
+
   return (
+    
+<div> 
+<div className="reviews-section">
+      <h1>Reviews</h1>
+      {reviews.length === 0 ? (
+        <p className="no-reviews">No reviews yet.</p>
+      ) : (
+        reviews.map((review, index) => (
+          <div key={index} className="review-card">
+            <div className="review-header">
+              <h4 className="reviewer-name">Reviewer: {review.reviewerName}</h4>
+              <span className="rating">Rating: {review.rating}/5</span>
+            </div>
+            <div className="review-body">
+              
+              <p>{review.reviewText}</p>
+            </div>
+          </div>
+        ))
+      )}
+    </div>
+
     <div className="add-review-container">
       <h3>Add Review</h3>
       {error && <p style={{ color: "red" }}>{error}</p>}
       <form onSubmit={handleSubmit}>
-        <label>
+        <label className="adc-name">
           Your Name:
           <input
             type="text"
@@ -52,8 +81,19 @@ const AddReview = ({ movieId, addReview }) => {
             required
           />
         </label>
+        <label className="adc-review">
+          Review:
+          <textarea
+            value={reviewText}
+            onChange={handleReviewTextChange}
+            required
+          ></textarea>
+          <p>
+            {reviewText.length}/125 {}
+          </p>
+        </label>
 
-        <label>
+        <label className="adc-rating">
           Rating (1-5):
           <input
             type="number"
@@ -65,17 +105,11 @@ const AddReview = ({ movieId, addReview }) => {
           />
         </label>
 
-        <label>
-          Review:
-          <textarea
-            value={reviewText}
-            onChange={(e) => setReviewText(e.target.value)}
-            required
-          ></textarea>
-        </label>
+       
 
         <button type="submit">Send Review</button>
       </form>
+    </div>
     </div>
   );
 };
