@@ -1,0 +1,28 @@
+
+/* image */
+.random-movie-img { 
+max-width: 70px;
+flex-shrink: 0;
+}
+
+.random-movie-card { 
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: solid 1px rgb(35, 26, 26);
+}
+
+.random-movie-card a { 
+    display: flex;
+    align-items: center;
+   
+}
+
+.random-movies a{ 
+    text-decoration: none;
+    color:  inherit;
+}
+.random-movie-card h4 { 
+  margin-left: 10px; 
+  flex-grow: 1; 
+}

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./OneMovie.css";
 import AddReview from "../components/AddReview";
+import OtherMovies from "../components/OtherMovies";
 
 const OneMovie = () => {
   const { id } = useParams();
@@ -71,16 +72,20 @@ const OneMovie = () => {
        
   
 
-      <div className="review-section">
-        <div className="rc-add-review">
+      <div className="addReview-OtherMovies">
+          <div className="rc-add-review">
           {" "}
           <AddReview
             movieId={movie.id}
             reviews={reviews}
             addReview={addReview}
           />
-        </div>
+         </div>
+          <div className="random-movie-seciton">
+          <OtherMovies/> 
+          </div>
       </div>
+
     </div>
   );
 };

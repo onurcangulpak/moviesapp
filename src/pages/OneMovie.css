@@ -1,9 +1,10 @@
-.one-movie-container {
+ .one-movie-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 30px;
 }
+
 .movie-details {
   position: relative;
   display: flex;
@@ -11,27 +12,46 @@
   justify-content: space-between;
   padding: 20px 20px;
   margin: 0;
-  background-color: #360e0e;
-  color: #e0e0e0;
-  box-shadow: 0 0 15px rgba(64, 60, 60, 0.482);
+  color: #ecdfcc;
   border-radius: 8px;
   margin-top: 30px;
   overflow: visible;
   min-height: 500px;
 }
+
 .movie-details > div {
   margin-left: 20px;
 }
+
 .mv-details {
   margin-right: 10%;
   margin-bottom: 5%;
 }
 
+/* add review and othermovies */
+.addReview-OtherMovies {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ECDFCC;
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-right: 30px;
+  
+
+}
+
+.rc-add-review {
+  flex: 0 1 100%; 
+}
+
+.random-movie-seciton {
+  flex: 0 1 50%;
+  max-width: 300px; 
+}
 .movie-details img {
   position: absolute;
   top: -10px;
   height: calc(100% + 20px);
-
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   min-width: 350px;
@@ -39,14 +59,13 @@
 
 .movie-details h2 {
   font-size: 2rem;
-  color: #ff6666;
-  
+  color: #ec654d;
 }
 
 .movie-details p {
   font-size: 1.5rem;
   margin: 5px 0;
-  color: #d0d0d0;
+  color: #ffffff;
   padding-top: 5px;
 }
 
@@ -55,25 +74,18 @@
   font-style: italic;
 }
 
-.review-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: #edead0;
-  border-radius: 8px;
-  margin-top: 30px;
-  margin-right: 30px;
-  width: 50%;
-}
-
 .loading,
 .error {
   text-align: center;
   font-size: 1.5rem;
-  color: #ff4d4d;
+  color: #ec654d;
   padding: 20px;
 }
 
 .error {
-  color: #ff4d4d;
+  color: #ec654d;
+}
+
+.one-movie-container-review-section {
+  border: solid 3px rgb(60, 255, 0);
 }

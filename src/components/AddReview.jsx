@@ -48,10 +48,11 @@ const AddReview = ({ movieId, addReview, reviews }) => {
   return (
     
 <div> 
-<div className="reviews-section">
+  <div className="out-con-review"> 
+<div className="add-review-section">
       <h1>Reviews</h1>
       {reviews.length === 0 ? (
-        <p className="no-reviews">No reviews yet.</p>
+        <p className="no-reviews">No reviews yet. Wanna be the first one ? </p>
       ) : (
         reviews.map((review, index) => (
           <div key={index} className="review-card">
@@ -109,6 +110,7 @@ const AddReview = ({ movieId, addReview, reviews }) => {
 
         <button type="submit">Send Review</button>
       </form>
+    </div>
     </div>
     </div>
   );
