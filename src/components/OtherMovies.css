@@ -5,6 +5,7 @@ max-width: 70px;
 flex-shrink: 0;
 }
 
+
 .random-movie-card { 
     display: flex;
     align-items: center;
