@@ -6,7 +6,7 @@ body {
     padding: 0;
   }
   
-  h1 {
+  .movies-list h1 {
     text-align: center;
     margin-top: 20px;
     color: #bc2b2b;

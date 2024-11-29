@@ -9,12 +9,18 @@
   margin-bottom: 20px;
 }
 
+.add-review-section h1{ 
+  margin-bottom: 10px;
+  text-align: center;
+
+}
 .review-card {
   background-color: #1e1e1e;
   border: 1px solid #333;
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 15px;
+
 }
 
 .review-header {
@@ -88,4 +94,8 @@ button:hover {
 .no-reviews {
   color: #aaa;
   font-style: italic;
+}
+
+textarea {
+  resize: none;
 }
