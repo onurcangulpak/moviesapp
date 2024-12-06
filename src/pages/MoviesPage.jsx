@@ -36,7 +36,7 @@ if (movies.length === 0) {
           </Link>
         </li>
       ))}
-    </ul>67
+    </ul>
     </div>
   </div>
   )
