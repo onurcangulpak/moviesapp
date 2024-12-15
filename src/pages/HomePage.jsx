@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import "./HomePage.css"
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
@@ -29,9 +30,10 @@ const HomePage = () => {
           <ul>
             {movies.map((movie) => (
               <li key={movie.id}>
-                <img src={movie.image} alt={movie.title}></img>
-                <h2>{movie.title}</h2>
-                <p>IMDB rate: {movie.imdbRating}</p>
+                 <Link to={`/movies/${movie.id}`}> 
+          <img src={movie.image} alt="movieimages"/>
+          <h2>{movie.title}</h2>
+          </Link>
               </li>
             ))}
           </ul>

@@ -26,6 +26,7 @@ if (movies.length === 0) {
   return (
     <div className='movies-list'>
     <h1>Movies List</h1>
+   
     <div  className='movies-container'> 
     <ul className='movies-ul'> 
       {movies.map(movie => (
