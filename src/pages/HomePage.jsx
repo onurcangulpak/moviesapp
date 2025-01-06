@@ -21,7 +21,7 @@ const HomePage = () => {
         console.log("Error while getting the movies", error);
       });
   }, []);
-
+// top 5 movies
   return (
       <div className="top-5-movies">
         {movies.length === 0 ? (
