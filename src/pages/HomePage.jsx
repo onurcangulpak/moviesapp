@@ -7,6 +7,13 @@ import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
+//   const [categories, setCategories] = useState([
+//   "Action", "Fantasy", "Drama", "Romance", "Science Fiction", "Adventure",
+//   "Horror", "Thriller", "Comedy", "Crime", "Mastery", "History", "Animation",
+//   "Family", "Biography", "Mystery", "Western", "Music", "War"
+// ]);
+  const [categories, setCategories] = useState([]);
+
 
   useEffect(() => {
     axios
@@ -16,6 +23,12 @@ const HomePage = () => {
           (a, b) => b.imdbRating - a.imdbRating
         );
         setMovies(sortedMovies.slice(0, 5));
+
+        // Extracting unique categories dynamically
+
+        const allCategories = response.data.flatMap((movie)=> movie.categories )
+        const uniqueCategories = [...new Set(allCategories)]
+        setCategories(uniqueCategories)
       })
       .catch((error) => {
         console.log("Error while getting the movies", error);
@@ -23,6 +36,16 @@ const HomePage = () => {
   }, []);
 // top 5 movies
   return (
+
+<div>
+  <h1>categories</h1>
+<div className="categories"> 
+<ul> 
+  {categories.map((category)=>(
+    <li key={category}>{category}</li>
+  ) )}
+</ul>
+</div>
       <div className="top-5-movies">
         {movies.length === 0 ? (
           <div> Loading... </div>
@@ -38,6 +61,7 @@ const HomePage = () => {
             ))}
           </ul>
         )}
+      </div>
       </div>
   );
 };
