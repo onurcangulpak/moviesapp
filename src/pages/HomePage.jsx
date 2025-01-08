@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import "./HomePage.css"
 import { Link } from "react-router-dom";
-
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
 //   const [categories, setCategories] = useState([
@@ -42,7 +41,8 @@ const HomePage = () => {
 <div className="categories"> 
 <ul> 
   {categories.map((category)=>(
-    <li key={category}>{category}</li>
+    // <li key={category}>{category}</li>
+    <li key={category}><Link to={`/categories/${category}`}>{category}</Link></li>
   ) )}
 </ul>
 </div>

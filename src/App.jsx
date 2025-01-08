@@ -7,6 +7,7 @@ import MoviesPage from './pages/MoviesPage';
 import AboutUs from './pages/AboutUs';
 import OneMovie from './pages/OneMovie';
 import NotFound from './pages/NotFound';
+import CategoryPage from './components/CategoryPage';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Route path='/movies/:id' element={<OneMovie/>}/>
       <Route path='/aboutus' element={<AboutUs/>}/>
       <Route path='*' element={<NotFound />} />
+      <Route path='/categories/:categoryName' element={<CategoryPage />} />
 
 
 </Routes>
