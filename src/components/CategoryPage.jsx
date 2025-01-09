@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const CategoryPage = () => {
   const [movies, setMovies] = useState([]);
@@ -15,14 +15,14 @@ const CategoryPage = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.log("error while fetching movies");
+        console.log(error, "error while fetching movies");
         setLoading(false);
       });
   }, []);
 
-  const filteredMovies = movies.filter((movie) =>
-    movie.categories.includes(categoryName)
-  );
+  const filteredMovies = movies
+    .filter((movie) => movie.categories.includes(categoryName))
+    .sort((a, b) => a.title.localeCompare(b.title));
   return (
     <div>
       <h1>{categoryName}</h1>
@@ -33,7 +33,10 @@ const CategoryPage = () => {
           {filteredMovies.length > 0 ? (
             filteredMovies.map((movies) => (
               <li key={movies.id}>
-                <h2>{movies.title}</h2>
+                <Link to={`/movies/${movies.id}`}>
+                  {" "}
+                  <h2>{movies.title}</h2>
+                </Link>
               </li>
             ))
           ) : (
