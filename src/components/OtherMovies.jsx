@@ -34,13 +34,14 @@ const OtherMovies = () => {
 
   return (
     <div className="other-movies-container">
-      <h3>Check out other movies!</h3>
-      <div className="random-movies">
-        {loading ? (
-          <p>Loading movies...</p> 
-        ) : (
-          randomMovies.map((movie) => (
-            <Link to={`/movies/${movie.id}`} key={movie.id}>  
+    <h3>Check out other movies!</h3>
+    <ul className="random-movies">
+      {loading ? (
+        <p>Loading movies...</p>
+      ) : (
+        randomMovies.map((movie) => (
+          <li key={movie.id}>
+            <Link to={`/movies/${movie.id}`}>
               <div className="random-movie-card">
                 <img
                   src={movie.image}
@@ -50,10 +51,11 @@ const OtherMovies = () => {
                 <h4>{movie.title}</h4>
               </div>
             </Link>
-          ))
-        )}
-      </div>
-    </div>
+          </li>
+        ))
+      )}
+    </ul>
+  </div>
   );
 };
 
