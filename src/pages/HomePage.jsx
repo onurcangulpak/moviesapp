@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import "./HomePage.css";
 import { Link } from "react-router-dom";
-import SearchBox from "../components/SearchBox";
 import TopFiveMovies from "../components/TopFiveMovies";
 
 

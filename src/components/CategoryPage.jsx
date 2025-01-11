@@ -27,7 +27,7 @@ const CategoryPage = () => {
   
   
     return (
-    <div>
+    <div className="ctg-out-con">
       <h1>{categoryName}</h1>
       {loading ? (
         <p>Loading...</p>

@@ -8,6 +8,7 @@
   border-radius: 4px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+
 }
 .random-movie-img {
   max-width: 70px;
@@ -38,6 +39,7 @@
 .other-movies-container h3 {
   text-align: center;
   margin: 4px;
+ 
 }
 .random-movies {
   list-style-type: none;

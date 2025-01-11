@@ -1,6 +1,15 @@
 .home-page-out-container { 
     display: flex;
     justify-content: space-between;
-    border: solid 1px red;
   
 }
+.categories { 
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.categories a {
+    text-decoration: none; 
+    color: #ffff;
+    font-weight: bold;
+  }
