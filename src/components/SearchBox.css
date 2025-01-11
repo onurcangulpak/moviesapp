@@ -1,0 +1,18 @@
+.search-box { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box button img { 
+    height: 40px;
+    margin-top: 10px;
+   
+}
+.search-box-button { 
+    background: none; /* Remove the button's background */
+    border: none;     /* Remove the border */
+    padding: 0;       /* Remove padding */
+    margin: 0;        /* Remove margin */
+    cursor: pointer;
+}

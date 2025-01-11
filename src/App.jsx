@@ -9,6 +9,7 @@ import OneMovie from './pages/OneMovie';
 import NotFound from './pages/NotFound';
 import CategoryPage from './components/CategoryPage';
 import SearchedMovies from './pages/SearchedMovies';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
 
 
 </Routes>
+<Footer/>
 </Router>
 </>
   )

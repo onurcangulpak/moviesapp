@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./SearchBox.css"
 
 
 const SearchBox = ({ searchMovies, setSearchMovies }) => {
@@ -20,7 +21,9 @@ const SearchBox = ({ searchMovies, setSearchMovies }) => {
         value={searchMovies}
         onChange={(e) => setSearchMovies(e.target.value)}
       />
-      <button onClick={handleSearchClick}>Search</button>
+      <button className="search-box-button" onClick={handleSearchClick}> 
+        <img src="../src/assets/images/search.png"/>
+      </button>
     </div>
   );
 };

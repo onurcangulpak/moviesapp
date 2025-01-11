@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./NavBar.css";
+import SearchBox from './SearchBox';
 
 const NavBar = () => {
+
+   const [searchMovies, setSearchMovies] = useState("");
+
   return (
  <nav className='nav-bar'> 
 
@@ -14,7 +18,16 @@ const NavBar = () => {
         <Link to="/allmovies"> All Movies</Link>
         </li>
         <li> <Link to="/aboutus"> About Us </Link>
+      
+        </li>
 
+        <li> 
+        <div className="hp-searchbox"> 
+      <SearchBox
+        searchMovies={searchMovies}
+        setSearchMovies={setSearchMovies}
+      />
+      </div>
         </li>
     </ul>
  </nav>

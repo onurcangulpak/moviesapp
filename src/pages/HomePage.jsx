@@ -16,7 +16,6 @@ const HomePage = () => {
   //   "Family", "Biography", "Mystery", "Western", "Music", "War"
   // ]);
   const [categories, setCategories] = useState([]);
-  const [searchMovies, setSearchMovies] = useState("");
 
   useEffect(() => {
     axios
@@ -55,12 +54,7 @@ const HomePage = () => {
           ))}
         </ul>
       </div>
-      <div className="hp-searchbox"> 
-      <SearchBox
-        searchMovies={searchMovies}
-        setSearchMovies={setSearchMovies}
-      />
-      </div>
+      
 
       <div className="hp-topfivemovies"> 
       <TopFiveMovies movies={movies}/>

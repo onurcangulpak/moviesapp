@@ -103,7 +103,7 @@ const AddReview = ({ movieId, addReview, reviews }) => {
             </select>
           </label>
 
-          <button type="submit">Send Review</button>
+          <button className="add-review-button" type="submit">Send Review</button>
         </form>
       </div>
     </div>

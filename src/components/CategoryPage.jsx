@@ -23,7 +23,10 @@ const CategoryPage = () => {
   const filteredMovies = movies
     .filter((movie) => movie.categories.includes(categoryName))
     .sort((a, b) => a.title.localeCompare(b.title));
-  return (
+  
+  
+  
+    return (
     <div>
       <h1>{categoryName}</h1>
       {loading ? (
