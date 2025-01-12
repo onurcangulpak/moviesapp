@@ -1,6 +1,10 @@
 .home-page-out-container { 
     display: flex;
     justify-content: space-between;
+    padding: 0px 0px 50px 50px;
+    margin: 50px 100px 50px 100px;
+    background-color: #121212;
+    border-radius: 10px;
   
 }
 .categories { 
