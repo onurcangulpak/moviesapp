@@ -41,9 +41,9 @@ const HomePage = () => {
 
   
   return (
-    <div className="home-page-out-container">
+    <div className="hpo-con">
       <div className="categories">
-        <h1>categories</h1>
+        <h2>Categories</h2>
         <ul>
           {categories.map((category) => (
             // <li key={category}>{category}</li>
