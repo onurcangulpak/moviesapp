@@ -22,14 +22,15 @@ const NavBar = () => {
         </li>
 
         <li> 
-        <div className="hp-searchbox"> 
+      
+        </li>
+    </ul>
+    <div className="hp-searchbox"> 
       <SearchBox
         searchMovies={searchMovies}
         setSearchMovies={setSearchMovies}
       />
       </div>
-        </li>
-    </ul>
  </nav>
   )
 }
