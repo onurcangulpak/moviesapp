@@ -5,21 +5,17 @@ import { useState } from "react";
 import "./HomePage.css";
 import { Link } from "react-router-dom";
 import TopFiveMovies from "../components/TopFiveMovies";
-import glad from "../assets/images/Glad.jpg"
-import madMax from "../assets/images/MadMax.jpg"
-import therevenant from "../assets/images/the-revenant.jpg"
-import whiplash from "../assets/images/Whiplash.jpg"
+import BackgroundSection from "../components/BackgroundSection";
 
 
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
-  //   const [categories, setCategories] = useState([
-  //   "Action", "Fantasy", "Drama", "Romance", "Science Fiction", "Adventure",
-  //   "Horror", "Thriller", "Comedy", "Crime", "Mastery", "History", "Animation",
-  //   "Family", "Biography", "Mystery", "Western", "Music", "War"
-  // ]);
   const [categories, setCategories] = useState([]);
+ 
+  
+const [imagesCounter,setImagesCounter] = useState(1)
+
 
   useEffect(() => {
     axios
@@ -60,10 +56,8 @@ const HomePage = () => {
                 ))}
                  </ul>
           </div>
-      
-      <div className="images"> </div>
-
-      <div className="hp-topfivemovies"> 
+      <BackgroundSection imagesCounter={imagesCounter} setImagesCounter={setImagesCounter}/>
+         <div className="hp-topfivemovies"> 
       <TopFiveMovies movies={movies}/>
       </div>
     </div>
