@@ -8,7 +8,6 @@ body {
   display: flex;
   align-items: center;
   border-bottom: #181C14 solid 1px;
-  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;

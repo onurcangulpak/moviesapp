@@ -5,6 +5,11 @@ import { useState } from "react";
 import "./HomePage.css";
 import { Link } from "react-router-dom";
 import TopFiveMovies from "../components/TopFiveMovies";
+import glad from "../assets/images/Glad.jpg"
+import madMax from "../assets/images/MadMax.jpg"
+import therevenant from "../assets/images/the-revenant.jpg"
+import whiplash from "../assets/images/Whiplash.jpg"
+
 
 
 const HomePage = () => {
@@ -42,18 +47,21 @@ const HomePage = () => {
   
   return (
     <div className="hpo-con">
-      <div className="categories">
-        <h2>Categories</h2>
-        <ul>
-          {categories.map((category) => (
-            // <li key={category}>{category}</li>
-            <li key={category}>
-              <Link to={`/categories/${category}`}>{category}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+
+          <div className="categories">
+             <h2>Categories</h2>
+                <div className="hp-under-line"></div>
+                  <ul>
+                   {categories.map((category) => (
+                  // <li key={category}>{category}</li>
+                   <li key={category}>
+                   <Link to={`/categories/${category}`}>{category}</Link>
+                 </li>
+                ))}
+                 </ul>
+          </div>
       
+      <div className="images"> </div>
 
       <div className="hp-topfivemovies"> 
       <TopFiveMovies movies={movies}/>
