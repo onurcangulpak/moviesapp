@@ -1,10 +1,25 @@
-import React from "react";
-import glad from "../assets/images/Glad.jpg";
+import React, { useState } from "react";
+import glad from "../assets/images/Gladiator_resized.jpg";
 import madMax from "../assets/images/MadMax.jpg";
-import therevenant from "../assets/images/the-revenant.jpg";
-import whiplash from "../assets/images/Whiplash.jpg";
+import therevenant from "../assets/images/Revenant_resized.jpg";
+import whiplash from "../assets/images/Whiplash_resized.jpg";
+import "./BackgroundSection.css";
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
-const BackgroundSection = ({ imagesCounter, setImagesCounter }) => {
+const BackgroundSection = () => {
+  const [ slide, setSlide ] = useState(0);
+  
+  const nextSlide = ()=> { 
+    setSlide( slide === backgroundImages.length -1 ? 0 : slide + 1)
+
+  }
+
+  const prevSlide = ()=> { 
+    setSlide(slide === 0? backgroundImages.length -1 : slide - 1)
+    
+  }
+
+
   const backgroundImagesText = [
     { text1: "Gladiator" },
     { text2: "Mad Max" },
@@ -19,49 +34,27 @@ const BackgroundSection = ({ imagesCounter, setImagesCounter }) => {
   ];
 
   return (
-    <div>
-      <div className="bs-images-text">
-        <p>{backgroundImagesText[imagesCounter].text1}</p>
-        <p>{backgroundImagesText[imagesCounter].text2}</p>
-        <p>{backgroundImagesText[imagesCounter].text3}</p>
-        <p>{backgroundImagesText[imagesCounter].text4}</p>
-      </div>
-      <div className="bs-images">
-        <img
-          src={backgroundImages[imagesCounter].img}
-          alt={backgroundImages[imagesCounter].alt}
-          className="bs-images-background"
-          style={{ maxHeight: "100px" }}
-        />
-      </div>
-      <div className="bs-images-switch">
-        <ul className="image-dots">
-          <li
-            onClick={() => setImagesCounter(0)}
-            className={imagesCounter === 0 ? "images-dot orange" : "image-dot"}
-          >
-            {" "}
-          </li>
-          <li
-            onClick={() => setImagesCounter(1)}
-            className={imagesCounter === 1 ? "images-dot orange" : "image-dot"}
-          >
-            {" "}
-          </li>
-          <li
-            onClick={() => setImagesCounter(2)}
-            className={imagesCounter === 2 ? "images-dot orange" : "image-dot"}
-          >
-            {" "}
-          </li>
-          <li
-            onClick={() => setImagesCounter(3)}
-            className={imagesCounter === 3 ? "images-dot orange" : "image-dot"}
-          >
-            {" "}
-          </li>
-        </ul>
-      </div>
+    <div className="carousel">
+      <BsArrowLeftCircleFill className="arrow arrow-left" onClick={prevSlide}/>
+      {backgroundImages.map((bgimg, index) => {
+        return (
+          <img
+            src={bgimg.img}
+            alt={bgimg.alt}
+            key={index}
+            className={slide === index ? "slide" : "slide slide-hidden"}
+          />
+        );
+      })}
+
+      <BsArrowRightCircleFill className="arrow arrow-right" onClick={nextSlide} />
+      <span className="indicators">
+        {backgroundImages.map((_, index) => {
+          return (
+            <button key={index} onClick={()=> setSlide(index)} className={slide === index ? "indicator": "indicator indicator-inactive"}></button>
+          );
+        })}
+      </span>
     </div>
   );
 };

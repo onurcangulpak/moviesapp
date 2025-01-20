@@ -56,8 +56,10 @@ const [imagesCounter,setImagesCounter] = useState(1)
                 ))}
                  </ul>
           </div>
+          <div className="hp-bg-section">
       <BackgroundSection imagesCounter={imagesCounter} setImagesCounter={setImagesCounter}/>
-         <div className="hp-topfivemovies"> 
+      </div>
+       <div className="hp-topfivemovies"> 
       <TopFiveMovies movies={movies}/>
       </div>
     </div>
