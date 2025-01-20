@@ -76,7 +76,7 @@ select {
 }
 
 
-.add-review-button  button {
+.add-review-button {
   background-color: #3498db; 
   color: #fff;
   padding: 10px 20px;
@@ -87,7 +87,7 @@ select {
   transition: background-color 0.3s;
 }
 
-.add-review-button button:hover {
+.add-review-button:hover {
   background-color: #2980b9; 
 }
 

@@ -43,10 +43,10 @@ const [imagesCounter,setImagesCounter] = useState(1)
   
   return (
     <div className="hpo-con">
-
+          <div className="hp-categories"> 
           <div className="categories">
-             <h2>Categories</h2>
-                <div className="hp-under-line"></div>
+             <h3>Categories</h3>
+                <div className="categories-under-line"></div>
                   <ul>
                    {categories.map((category) => (
                   // <li key={category}>{category}</li>
@@ -55,6 +55,7 @@ const [imagesCounter,setImagesCounter] = useState(1)
                  </li>
                 ))}
                  </ul>
+          </div>
           </div>
           <div className="hp-bg-section">
       <BackgroundSection imagesCounter={imagesCounter} setImagesCounter={setImagesCounter}/>

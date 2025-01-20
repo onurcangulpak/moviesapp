@@ -1,68 +1,84 @@
-.hpo-con { 
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 0px 50px 10px;
-    margin: 50px 100px 50px 100px;
-    background-color: #121212;
-    border-radius: 10px;
+.hpo-con {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 100px 50px 100px;
+  background-color: #121212;
+  border-radius: 10px;
 }
 
-
 .categories ul {
-    list-style-type: none;
-  display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Grid layout */
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(150px, 1fr)
+  ); /* Grid layout */
   gap: 15px;
   padding: 0;
   margin: 0;
+  
+  
 }
 
-
-.categories { 
-   cursor: pointer;
-
-   
+.categories {
+  cursor: pointer;
 }
 
 .categories a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-  }
-
-.categories li { 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 4px;
-    background-color: #2c2c2c;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  
 }
 
-.categories h2 { 
-    font-size: 18px; 
-    font-weight: 600; 
-    padding: 5px; 
-    text-transform: uppercase; 
-    letter-spacing: 1px;
-    border-bottom: 3px solid #ff6347;
-    color: #e0e0e0; 
-    text-align: center;
-    margin: 15px 0; 
-   
+.categories li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categories h3 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e0e0e0;
+  text-align: center;
+  padding-top: 10px;
+
 }
 
 .categories a:hover {
-    color: #ff6347;
-    text-decoration: underline;
+  color: #ff6347;
+  text-decoration: underline;
 }
 
-.hp-topfivemovies { 
-    margin: 15px 0; 
-}
-.hp-bg-section { 
-   
+.categories-under-line { 
+  margin: 0 auto; 
+  width: 90%; 
+  height: 2px; 
+  background-color: #ff6347;
+  margin-bottom: 10px;
 
+}
+.hp-topfivemovies {
+  }
+
+
+
+.carousel {
+  margin-top: 55px;
+}
+
+.hp-categories {
+  padding: 10px 10px;
+}
+
+.hp-topfivemovies {
+  padding: 10px 10px;
 }
