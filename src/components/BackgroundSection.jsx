@@ -21,16 +21,16 @@ const BackgroundSection = () => {
 
 
   const backgroundImagesText = [
-    { text1: "Gladiator" },
-    { text2: "Mad Max" },
-    { text3: "The Revenant" },
-    { text4: "Whiplash" },
+    { tittle: "Gladiator" },
+    { tittle: "Mad Max" },
+    { tittle: "The Revenant" },
+    { tittle: "Whiplash" },
   ];
   const backgroundImages = [
-    { img: glad, alt: "gladiator" },
-    { img: madMax, alt: "madmax" },
-    { img: therevenant, alt: "therevenant" },
-    { img: whiplash, alt: "whiplash" },
+    { img: glad, alt: "Gladiator" },
+    { img: madMax, alt: "Mad Max" },
+    { img: therevenant, alt: "The Revenant" },
+    { img: whiplash, alt: "Whiplash" },
   ];
 
   return (
@@ -38,12 +38,17 @@ const BackgroundSection = () => {
       <BsArrowLeftCircleFill className="arrow arrow-left" onClick={prevSlide}/>
       {backgroundImages.map((bgimg, index) => {
         return (
-          <img
-            src={bgimg.img}
-            alt={bgimg.alt}
-            key={index}
-            className={slide === index ? "slide" : "slide slide-hidden"}
-          />
+          <div
+          key={index}
+          className={slide === index ? "slide-container" : "slide-container slide-hidden"}
+        >
+          <img src={bgimg.img} alt={bgimg.alt} className="slide" />
+          {/* Gradient overlay and title */}
+          <div className="gradient-overlay">
+            <div className="slide-title">{bgimg.alt}</div>
+          </div>
+        </div>
+         
         );
       })}
 
