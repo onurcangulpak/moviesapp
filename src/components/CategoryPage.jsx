@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import "./CategoryPage.css"
 
 const CategoryPage = () => {
   const [movies, setMovies] = useState([]);
@@ -27,18 +28,19 @@ const CategoryPage = () => {
   
   
     return (
-    <div className="ctg-out-con">
+    <div className="ctg-movies-list">
       <h1>{categoryName}</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <ul>
+        <div className="ctg-movies-container">
+        <ul className="ctg-movies-ul">
           {filteredMovies.length > 0 ? (
             filteredMovies.map((movies) => (
-              <li key={movies.id}>
-                <Link to={`/movies/${movies.id}`}>
-                  {" "}
-                  <h2>{movies.title}</h2>
+              <li key={movies.id}> 
+              <Link to={`/movies/${movies.id}`}> 
+                <img src={movies.image} alt="movieimages"/>
+                <h2>{movies.title}</h2>
                 </Link>
               </li>
             ))
@@ -46,6 +48,7 @@ const CategoryPage = () => {
             <p>No movies found in {categoryName}.</p>
           )}
         </ul>
+        </div>
       )}
     </div>
   );
