@@ -39,18 +39,19 @@ body {
 }
 
 .ctg-movies-ul li {
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-  width: 200px;
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border: solid 1px black;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    width: 200px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border: solid 1px black;
 }
 .ctg-movies-ul li:hover {
   transform: translateY(-5px);
@@ -63,13 +64,17 @@ body {
 }
 
 .ctg-movies-ul h2 {
-  font-size: 16px;
-  height: 40px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin: 10px 0;
-  color: #333;
+    font-size: 16px;
+    height: 40px;
+      overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333;
+    white-space: normal;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ctg-movies-ul a {
