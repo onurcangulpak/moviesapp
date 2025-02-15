@@ -5,6 +5,7 @@ import therevenant from "../assets/images/Revenant_resized.jpg";
 import whiplash from "../assets/images/Whiplash_resized.jpg";
 import "./BackgroundSection.css";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const BackgroundSection = () => {
   const [ slide, setSlide ] = useState(0);
@@ -19,18 +20,12 @@ const BackgroundSection = () => {
     
   }
 
-
-  const backgroundImagesText = [
-    { tittle: "Gladiator" },
-    { tittle: "Mad Max" },
-    { tittle: "The Revenant" },
-    { tittle: "Whiplash" },
-  ];
+  
   const backgroundImages = [
-    { img: glad, alt: "Gladiator" },
-    { img: madMax, alt: "Mad Max" },
-    { img: therevenant, alt: "The Revenant" },
-    { img: whiplash, alt: "Whiplash" },
+    { img: glad, alt: "Gladiator" , id:9 },
+    { img: madMax, alt: "Mad Max", id:42 },
+    { img: therevenant, alt: "The Revenant" , id:27},
+    { img: whiplash, alt: "Whiplash", id:29 },
   ];
 
   return (
@@ -42,13 +37,15 @@ const BackgroundSection = () => {
           key={index}
           className={slide === index ? "slide-container" : "slide-container slide-hidden"}
         >
+          <Link to={`/movies/${bgimg.id}`}> 
           <img src={bgimg.img} alt={bgimg.alt} className="slide" />
-          {/* Gradient overlay and title */}
+       
           <div className="gradient-overlay">
             <div className="slide-title">{bgimg.alt}</div>
           </div>
+          </Link>
         </div>
-         
+       
         );
       })}
 
