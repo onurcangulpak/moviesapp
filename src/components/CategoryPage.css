@@ -1,31 +1,23 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #202123;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
 .ctg-movies-list {
-  padding: 0px 0px 50px 50px;
-  margin: 50px 100px 50px 100px;
+padding-bottom: 50px;
   border-radius: 10px;
   background-color: #121212;
-}
-
-.ctg-movies-list {
   text-align: center;
-  margin-top: 20px;
   color: #bc2b2b;
+  border: solid 1px green;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .ctg-movies-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
   text-align: center;
   max-width: 1200px;
+  border: solid 1px red;
 }
 
 .ctg-movies-ul {
@@ -39,19 +31,19 @@ body {
 }
 
 .ctg-movies-ul li {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    width: 200px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    border: solid 1px black;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  width: 200px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  border: solid 1px black;
 }
 .ctg-movies-ul li:hover {
   transform: translateY(-5px);
@@ -64,17 +56,18 @@ body {
 }
 
 .ctg-movies-ul h2 {
-    font-size: 16px;
-    height: 40px;
-      overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    color: #333;
-    white-space: normal;
-    word-wrap: break-word;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+  white-space: normal;
+  word-wrap: break-word;
+  
 }
 
 .ctg-movies-ul a {

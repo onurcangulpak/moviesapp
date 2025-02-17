@@ -42,6 +42,7 @@ const [imagesCounter,setImagesCounter] = useState(1)
 
   
   return (
+    <div className="app-container">
     <div className="hpo-con">
           <div className="hp-categories"> 
           <div className="categories">
@@ -63,6 +64,7 @@ const [imagesCounter,setImagesCounter] = useState(1)
        <div className="hp-topfivemovies"> 
       <TopFiveMovies movies={movies}/>
       </div>
+    </div>
     </div>
     
   );

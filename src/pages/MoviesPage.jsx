@@ -24,6 +24,7 @@ if (movies.length === 0) {
 }
 
   return (
+    <div className='app-container'> 
     <div className='movies-list'>
     <h1>Movies List</h1>
    
@@ -39,6 +40,7 @@ if (movies.length === 0) {
       ))}
     </ul>
     </div>
+  </div>
   </div>
   )
 }

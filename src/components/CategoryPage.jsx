@@ -28,6 +28,7 @@ const CategoryPage = () => {
   
   
     return (
+    <div className="app-container"> 
     <div className="ctg-movies-list">
       <h1>{categoryName}</h1>
       {loading ? (
@@ -50,6 +51,7 @@ const CategoryPage = () => {
         </ul>
         </div>
       )}
+    </div>
     </div>
   );
 };

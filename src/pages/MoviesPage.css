@@ -2,12 +2,12 @@ body {
   font-family: Arial, sans-serif;
   background-color: #202123;
   color: #333;
-
 }
 
 .movies-list {
-  padding: 0px 0px 50px 50px;
-  margin: 50px 100px 50px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 10px;
   background-color: #121212;
 }
@@ -66,7 +66,7 @@ body {
 .movies-ul h2 {
   font-size: 16px;
   height: 40px;
-    overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #333;

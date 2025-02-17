@@ -54,6 +54,7 @@ const OneMovie = () => {
   }
 
   return (
+    <div className="app-container"> 
     <div className="one-movie-container">
       <div className="movie-details">
         <div className="movie-details-img"> 
@@ -86,6 +87,7 @@ const OneMovie = () => {
           </div>
       </div>
 
+    </div>
     </div>
   );
 };
