@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./CategoryPage.css"
+import NavBar from "./NavBar";
 
 const CategoryPage = () => {
   const [movies, setMovies] = useState([]);
@@ -29,6 +30,7 @@ const CategoryPage = () => {
   
     return (
     <div className="app-container"> 
+    <NavBar/>
     <div className="ctg-movies-list">
       <h1>{categoryName}</h1>
       {loading ? (

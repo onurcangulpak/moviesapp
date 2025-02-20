@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './MoviesPage.css'
 import { Link } from 'react-router-dom'
+import NavBar from '../components/NavBar'
 
 const MoviesPage = () => {
 
@@ -25,8 +26,9 @@ if (movies.length === 0) {
 
   return (
     <div className='app-container'> 
+     <NavBar/>
     <div className='movies-list'>
-    <h1>Movies List</h1>
+  
    
     <div  className='movies-container'> 
     <ul className='movies-ul'> 

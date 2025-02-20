@@ -2,11 +2,14 @@
   background-color: #121212; 
   color: #e0e0e0; 
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px ;
+  margin: 14px 0px 14px 14px;
+
 }
 
 .add-review-section {
   margin-bottom: 20px;
+  
 }
 
 .add-review-section h1{ 
@@ -49,6 +52,9 @@
   border: 1px solid #333;
   padding: 20px;
   border-radius: 8px;
+
+
+  
 }
 
 h3 {

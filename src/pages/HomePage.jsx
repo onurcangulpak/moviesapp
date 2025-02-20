@@ -6,6 +6,7 @@ import "./HomePage.css";
 import { Link } from "react-router-dom";
 import TopFiveMovies from "../components/TopFiveMovies";
 import BackgroundSection from "../components/BackgroundSection";
+import NavBar from "../components/NavBar";
 
 
 
@@ -43,7 +44,9 @@ const [imagesCounter,setImagesCounter] = useState(1)
   
   return (
     <div className="app-container">
+      <NavBar/>
     <div className="hpo-con">
+      
           <div className="hp-categories"> 
           <div className="categories">
              <h3>Categories</h3>

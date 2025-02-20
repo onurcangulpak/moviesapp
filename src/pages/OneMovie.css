@@ -17,6 +17,7 @@
   margin-top: 30px;
   overflow: visible;
   min-height: 500px;
+  
 }
 
 .movie-details > div {
@@ -33,11 +34,23 @@
   display: flex;
   justify-content: space-between;
   background-color:#202123 ;
-  border-radius: 8px;
+  border-radius: 8px 8px 0px 0px;
   margin-top: 30px;
-  padding-top: 20px; 
-  gap: 20px; 
+  gap: 15px;
+  
+
+
+
 }
+/* 
+
+debugging
+.addReview-OtherMovies > div {
+
+border: solid 1px red;
+  
+
+} */
 
 .rc-add-review {
   flex: 0 1 100%; 
@@ -45,7 +58,7 @@
 
 .random-movie-seciton {
   flex: 0 1 50%;
-  max-width: 300px; 
+  max-width: 350px; 
 }
 .movie-details img {
   position: absolute;

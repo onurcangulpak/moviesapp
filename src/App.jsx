@@ -15,7 +15,6 @@ function App() {
   return (
     <>
       <Router>
-        <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/allmovies" element={<MoviesPage />} />
@@ -24,6 +23,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/categories/:categoryName" element={<CategoryPage />} />
           <Route path="/search/:query" element={<SearchedMovies />} />
+          
         </Routes>
         <Footer />
       </Router>

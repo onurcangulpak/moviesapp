@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   background-color: #121212;
-  border-radius: 10px;
+  border-radius: 0px 0px 0 0;
 }
 
 .categories ul {

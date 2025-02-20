@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import "./OneMovie.css";
 import AddReview from "../components/AddReview";
 import OtherMovies from "../components/OtherMovies";
+import NavBar from "../components/NavBar";
 
 const OneMovie = () => {
   const { id } = useParams();
@@ -55,6 +56,7 @@ const OneMovie = () => {
 
   return (
     <div className="app-container"> 
+     <NavBar/>
     <div className="one-movie-container">
       <div className="movie-details">
         <div className="movie-details-img"> 

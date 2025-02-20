@@ -1,8 +1,9 @@
-body { 
-    font-family: 'Open Sans', sans-serif;
+body {
+  font-family: "Open Sans", sans-serif;
+  
 }
 
-.app-container { 
-    margin: 50px 100px 50px 100px;
-
+.app-container {
+  margin: 50px 100px 0 100px;
+  
 }

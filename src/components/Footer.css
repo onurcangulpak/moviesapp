@@ -1,9 +1,10 @@
 .footer {
   display: flex;
   justify-content: space-around;
-  margin: 50px 100px 50px 100px;
   background-color: #121212;
-  border-radius: 10px;
+  padding: 10px;
+  margin: 0 100px 0px 100px;
+  border-radius: 0px 0px 10px 10px;
 }
 .footer h3,
 h4,
@@ -14,7 +15,6 @@ p {
 .footer h3 {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 .footer h4 {
   font-size: 14px;
@@ -56,4 +56,13 @@ p {
   display: flex;
   list-style: none;
   padding: 0;
+}
+.splinter { 
+  margin: 0 100px 0 100px;
+  min-height: 10px;
+  background-color: rgb(53, 49, 49);
+ 
+}
+.xx { 
+  padding-bottom: 50px;
 }
