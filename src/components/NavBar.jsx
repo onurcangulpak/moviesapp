@@ -1,38 +1,33 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
-import SearchBox from './SearchBox';
+import SearchBox from "./SearchBox";
 
 const NavBar = () => {
-
-   const [searchMovies, setSearchMovies] = useState("");
+  const [searchMovies, setSearchMovies] = useState("");
 
   return (
- <nav className='nav-bar'> 
-
-    <ul> 
-        <li> 
-           <Link to="/"> Home</Link> 
+    <nav className="nav-bar">
+      <ul>
+        <li>
+          <Link to="/"> Home</Link>
         </li>
-        <li> 
-        <Link to="/allmovies"> All Movies</Link>
+        <li>
+          <Link to="/allmovies"> All Movies</Link>
         </li>
-        <li> <Link to="/aboutus"> About Us </Link>
-      
+        <li>
+          {" "}
+          <Link to="/aboutus"> About Us </Link>
         </li>
-
-        <li> 
-      
-        </li>
-    </ul>
-    <div className="hp-searchbox"> 
-      <SearchBox
-        searchMovies={searchMovies}
-        setSearchMovies={setSearchMovies}
-      />
+      </ul>
+      <div className="hp-searchbox">
+        <SearchBox
+          searchMovies={searchMovies}
+          setSearchMovies={setSearchMovies}
+        />
       </div>
- </nav>
-  )
-}
+    </nav>
+  );
+};
 
-export default NavBar
+export default NavBar;
