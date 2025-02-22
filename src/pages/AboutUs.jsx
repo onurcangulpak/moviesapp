@@ -14,7 +14,15 @@ const AboutUs = () => {
           <img src={profilepic} alt="Profile" />
         </div>
         <h4 className="h4-element">Onurcan Gulpak</h4>
-        <p className="p-element">
+        
+      </div>
+
+      <div className="info-card">
+        
+        <h4 className="h4-element">Onurcan Gulpak</h4>
+        <p className="info-element">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
         </p>
       </div>
