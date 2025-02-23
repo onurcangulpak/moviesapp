@@ -28,8 +28,6 @@ if (movies.length === 0) {
     <div className='app-container'> 
      <NavBar/>
     <div className='movies-list'>
-  
-   
     <div  className='movies-container'> 
     <ul className='movies-ul'> 
       {movies.map(movie => (
