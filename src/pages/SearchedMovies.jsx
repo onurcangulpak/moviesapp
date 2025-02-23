@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import NavBar from "../components/NavBar";
+import "./SearchedMovies.css"
 
 const SearchedMovies = () => {
   const { query } = useParams();
@@ -24,7 +26,10 @@ const SearchedMovies = () => {
   }, [query]);
 
   return (
-    <div>
+    <div className="app-container"> 
+    <NavBar/>
+    <div className="splinter-contact-us"></div>
+    <div className="searched-movie-container">
       <h1>Search results for "{query}"</h1>
       {loading ? (
         <p>Loading...</p>
@@ -37,10 +42,11 @@ const SearchedMovies = () => {
               </li>
             ))
           ) : (
-            <p>No movies found matching "{query}" </p>
+            <p>No movies found matching "<span className="query-text"> {query} </span>". </p>
           )}
         </ul>
       )}
+    </div>
     </div>
   );
 };

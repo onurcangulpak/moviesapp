@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 import SearchBox from "./SearchBox";
+import icon from "../assets/images/m.png"
 
 const NavBar = () => {
   const [searchMovies, setSearchMovies] = useState("");
@@ -9,6 +10,7 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <ul>
+    
         <li>
           <Link to="/"> Home</Link>
         </li>
