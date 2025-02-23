@@ -1,0 +1,47 @@
+.contact-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.splinter-contact-us {
+  min-height: 10px;
+  min-width: 100%;
+  background-color: rgb(53, 49, 49);
+ 
+}
+.contact-container h3 {
+    color: #ffffff;
+    font-size: 24px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.contact-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.contact-content h4 {
+    color: #ffcc00;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.contact-content ul {
+    margin-left: 20px;
+    font-size: 14px;
+    list-style-type: disc;
+}
+
+.link-text {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+}
