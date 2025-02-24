@@ -4,82 +4,25 @@ body {
   color: #333;
 }
 
-.movies-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #121212;
-}
 
-.movies-list h1 {
-  text-align: center;
-  margin-top: 20px;
-  color: #bc2b2b;
+.movies-container h1 {
+  color: #ffffff;
+    font-size: 20px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
 }
 
 .movies-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  text-align: center;
-
-  padding: 25px 25px 25px 25px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 80vh;
 }
-
-.movies-ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 20px;
-  justify-content: center;
-}
-
-.movies-ul li {
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-  width: 200px;
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  border: solid 1px black;
-}
-
-.movies-ul li:hover {
-  transform: translateY(-5px);
-}
-
-.movies-ul img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-}
-
-.movies-ul h2 {
-  font-size: 16px;
-  height: 40px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: #333;
-  white-space: normal;
-  word-wrap: break-word;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.movies-ul a {
-  text-decoration: none;
-  color: inherit;
+.movies-container ul { 
+  font-size: 22px;
+  list-style-type: disc;
+  margin-top: 20px;
 }
 
 @media (max-width: 1200px) {

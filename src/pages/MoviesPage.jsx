@@ -27,9 +27,10 @@ if (movies.length === 0) {
   return (
     <div className='app-container'> 
      <NavBar/>
-    <div className='movies-list'>
-    <div  className='movies-container'> 
-    <ul className='movies-ul'> 
+     <div className="splinter-contact-us"></div>
+    <div  className='movie-container'> 
+      <h1>Movies</h1>
+    <ul className='movies-general'> 
       {movies.map(movie => (
         <li key={movie.id}> 
         <Link to={`/movies/${movie.id}`}> 
@@ -40,7 +41,7 @@ if (movies.length === 0) {
       ))}
     </ul>
     </div>
-  </div>
+ 
   </div>
   )
 }

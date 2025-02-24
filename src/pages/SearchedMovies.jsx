@@ -29,13 +29,13 @@ const SearchedMovies = () => {
     <div className="app-container"> 
     <NavBar/>
     <div className="splinter-contact-us"></div>
-    <div className="searched-movie-container">
+    <div className="movie-container">
       <h1>Search results for "<span className="query-text"> {query} </span>".</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (
         
-        <ul className="movies-ul">
+        <ul className="movies-general">
           {movies.length > 0 ? (
             movies.map((movie) => (
               <li key={movie.id}>
