@@ -3,6 +3,7 @@
   justify-content: space-between;
   background-color:#202123;
   border-radius: 0px 0px 0 0;
+
 }
 
 .categories ul {
@@ -21,6 +22,8 @@
   background-color: #121212;
   padding: 10px;
   border-radius: 8px;
+  margin: 14px 0 14px 14px;
+  
 }
 
 .categories a {
@@ -52,6 +55,7 @@
   color: #e0e0e0;
   text-align: center;
   padding-top: 10px;
+  text-align: center;
 }
 
 .categories a:hover {
@@ -71,10 +75,4 @@
   margin-top: 10%;
 }
 
-.hp-categories {
-  padding: 10px 10px;
-}
 
-.hp-topfivemovies {
-
-}

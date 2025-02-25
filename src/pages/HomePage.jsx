@@ -49,7 +49,7 @@ const [imagesCounter,setImagesCounter] = useState(1)
 
     <div className="hpo-con">
       
-          <div className="hp-categories"> 
+          
           <div className="categories">
              <h3>Categories</h3>
                 <div className="categories-under-line"></div>
@@ -62,7 +62,7 @@ const [imagesCounter,setImagesCounter] = useState(1)
                 ))}
                  </ul>
           </div>
-          </div>
+         
           <div className="hp-bg-section">
       <BackgroundSection imagesCounter={imagesCounter} setImagesCounter={setImagesCounter}/>
       </div>
