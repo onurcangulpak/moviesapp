@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import "./CategoryPage.css"
 import NavBar from "./NavBar";
 
 const CategoryPage = () => {
@@ -31,13 +30,15 @@ const CategoryPage = () => {
     return (
     <div className="app-container"> 
     <NavBar/>
-    <div className="ctg-movies-list">
+    <div className="splinter-contact-us"></div>
+
+    <div className="movie-container">
       <h1>{categoryName}</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div className="ctg-movies-container">
-        <ul className="ctg-movies-ul">
+       
+        <ul className="movies-general">
           {filteredMovies.length > 0 ? (
             filteredMovies.map((movies) => (
               <li key={movies.id}> 
@@ -51,7 +52,7 @@ const CategoryPage = () => {
             <p>No movies found in {categoryName}.</p>
           )}
         </ul>
-        </div>
+       
       )}
     </div>
     </div>

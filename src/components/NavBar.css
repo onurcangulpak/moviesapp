@@ -3,17 +3,17 @@ body {
 }
 
 .nav-bar {
-  background-color:#202123 ;
+  background-color: #1e1e1e;
+
   height: 50px;
   display: flex;
   align-items: center;
-  border-bottom: #181C14 solid 1px;
+  border-bottom: #181c14 solid 1px;
   top: 0;
   width: 100%;
   z-index: 1000;
   border-radius: 10px 10px 0px 0px;
 }
-
 
 .nav-bar ul {
   display: flex;
@@ -22,14 +22,14 @@ body {
   margin-left: 120px;
   align-items: center;
   list-style: none;
-  
+
   width: 100%;
 }
 
-
 .nav-bar a {
   text-decoration: none;
-  color: #ECDFCC;
+  color: #ffffff;
+
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
@@ -38,12 +38,11 @@ body {
 }
 
 .nav-bar a:hover {
-  color: #EC654D;
+  color: #ffffff;
   font-size: 1.15rem;
   transition: all 0.3s ease;
 }
 
-.hp-searchbox { 
+.hp-searchbox {
   margin-right: 100px;
-
 }

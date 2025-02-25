@@ -15,6 +15,7 @@ p {
 .footer h3 {
   font-size: 18px;
   font-weight: bold;
+ 
 }
 
 .footer a {
@@ -26,12 +27,15 @@ p {
   max-width: 1000px;
   text-align: justify;
   margin: 0 20px;
+
+  
 }
 .footer-links {
   display: flex;
   flex-direction: column;
   gap: 25px;
   margin-right: 10px;
+
 }
 
 .footer img {
@@ -54,12 +58,7 @@ p {
   list-style: none;
   padding: 0;
 }
-.splinter { 
-  margin: 0 100px 0 100px;
-  min-height: 10px;
-  background-color: rgb(53, 49, 49);
- 
-}
+
 .xx { 
   padding-bottom: 50px;
 }

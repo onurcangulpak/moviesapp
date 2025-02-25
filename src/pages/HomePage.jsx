@@ -45,6 +45,8 @@ const [imagesCounter,setImagesCounter] = useState(1)
   return (
     <div className="app-container">
       <NavBar/>
+      <div className="splinter-contact-us"></div>
+
     <div className="hpo-con">
       
           <div className="hp-categories"> 

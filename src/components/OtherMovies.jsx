@@ -34,7 +34,8 @@ const OtherMovies = () => {
 
   return (
     <div className="other-movies-container">
-    <h3>Check out other movies!</h3>
+    <h3>CHECK OUT OTHER MOVIES</h3>
+    <div className="top5-under-line"></div>
     <ul className="random-movies">
       {loading ? (
         <p>Loading movies...</p>

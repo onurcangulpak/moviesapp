@@ -30,10 +30,13 @@ const SearchedMovies = () => {
     <NavBar/>
     <div className="splinter-contact-us"></div>
     <div className="movie-container">
+
       <h1>Search results for "<span className="query-text"> {query} </span>".</h1>
+
       {loading ? (
         <p>Loading...</p>
       ) : (
+        
         
         <ul className="movies-general">
           {movies.length > 0 ? (

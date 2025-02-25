@@ -18,7 +18,7 @@
 
 }
 .review-card {
-  background-color: #1e1e1e;
+    background-color: #1e1e1e;
   border: 1px solid #333;
   padding: 15px;
   border-radius: 8px;
@@ -49,10 +49,9 @@
 
 .add-review-container {
   background-color: #1e1e1e;
-  border: 1px solid #333;
   padding: 20px;
   border-radius: 8px;
-
+  
 
   
 }
@@ -67,6 +66,7 @@ h3 {
 .adc-rating {
   display: block;
   margin-bottom: 15px;
+  
 }
 
 input[type="text"],
@@ -83,7 +83,7 @@ select {
 
 
 .add-review-button {
-  background-color: #3498db; 
+  background-color: #DDAA00;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -94,7 +94,7 @@ select {
 }
 
 .add-review-button:hover {
-  background-color: #2980b9; 
+  background-color: #ad5858;
 }
 
 .no-reviews {

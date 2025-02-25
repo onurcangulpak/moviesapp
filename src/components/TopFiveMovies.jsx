@@ -4,6 +4,7 @@ import "./TopFiveMovies.css";
 
 const TopFiveMovies = ({ movies }) => {
   return (
+   
     <div className="top-5-movies-con">
       <h3> TOP 5 MOVIES </h3>
       <div className="top5-under-line"></div>
@@ -28,6 +29,7 @@ const TopFiveMovies = ({ movies }) => {
         </ul>
       )}
     </div>
+   
   );
 };
 
