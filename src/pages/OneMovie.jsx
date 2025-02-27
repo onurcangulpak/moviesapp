@@ -57,7 +57,7 @@ const OneMovie = () => {
   return (
     <div className="app-container"> 
      <NavBar/>
-          <div className="splinter-contact-us"></div>
+     <div className="splinter-general"></div>
 
     <div className="one-movie-container">
       <div className="movie-details">

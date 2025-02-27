@@ -12,13 +12,19 @@ body {
   font-family: "Open Sans", sans-serif;
   
 }
-.app-container {
+.app-container  {
   margin: 50px 100px 0 100px;
-  
 }
 .splinter { 
   margin: 0 100px 0 100px;
   min-height: 10px;
+  background-color: rgb(53, 49, 49);
+ 
+}
+
+.splinter-general{
+  min-height: 10px;
+  min-width: 100%;
   background-color: rgb(53, 49, 49);
  
 }

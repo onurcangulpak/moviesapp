@@ -7,7 +7,8 @@ import linkedin from "../assets/images/linkedin.png";
 const Footer = () => {
   return (
   <div className="xx">
-    <div className="splinter"></div>
+     <div className="splinter"></div>
+
     <div className="footer">
     
       <div className="social-media">

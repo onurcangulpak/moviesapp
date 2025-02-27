@@ -27,8 +27,8 @@ if (movies.length === 0) {
   return (
     <div className='app-container'> 
      <NavBar/>
-     <div className="splinter-contact-us"></div>
-    <div  className='movie-container'> 
+     <div className="splinter-general"></div>
+     <div  className='movie-container'> 
       <h1>Movies</h1>
     <ul className='movies-general'> 
       {movies.map(movie => (

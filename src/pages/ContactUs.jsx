@@ -6,7 +6,7 @@ const ContactUs = () => {
   return (
     <div className="app-container">
       <NavBar />
-      <div className="splinter-contact-us"></div>
+      <div className="splinter-general"></div>
       <div className="contact-container">
         <h3>📩 Contact</h3>
         <div className="contact-content">

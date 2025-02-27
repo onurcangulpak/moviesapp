@@ -28,7 +28,7 @@ const SearchedMovies = () => {
   return (
     <div className="app-container"> 
     <NavBar/>
-    <div className="splinter-contact-us"></div>
+    <div className="splinter-general"></div>
     <div className="movie-container">
 
       <h1>Search results for "<span className="query-text"> {query} </span>".</h1>
