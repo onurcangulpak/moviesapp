@@ -1,15 +1,14 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import "./ContactUs.css";
 
 const ContactUs = () => {
   return (
     <div className="app-container">
       <NavBar />
       <div className="splinter-general"></div>
-      <div className="contact-container">
+      <div className="abconus-container">
         <h3>📩 Contact</h3>
-        <div className="contact-content">
+        <div className="abconus-content">
           <p>
             <strong>
               For advertising and suggestions, please use the contact information below.

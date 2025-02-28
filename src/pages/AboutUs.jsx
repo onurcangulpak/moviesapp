@@ -1,7 +1,5 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import "./AboutUs.css";
-import profilepic from "../assets/images/profilepic.jpg";
 import { Link } from "react-router-dom";
 
 const AboutUs = () => {
@@ -9,11 +7,11 @@ const AboutUs = () => {
     <div className="app-container">
       <NavBar />
       <div className="splinter-general"></div>
-      <div className="aboutus-container">
+      <div className="abconus-container">
         <h3>📌 About Us</h3>
-        <div className="about-content">
+        <div className="abconus-content">
           
-        <div className="about-text">
+        <div className="abconus-text">
   <p>
     Welcome to <strong>MoesOne</strong>, your ultimate hub for in-depth insights into the world of cinema.  
     Our mission is to create a space where movie enthusiasts can explore detailed information about their favorite films, genres, and actors.
