@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import "./AboutUs.css";
 import profilepic from "../assets/images/profilepic.jpg";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -52,7 +53,7 @@ const AboutUs = () => {
    Want to contribute? We welcome user-submitted reviews and insights!  
   </p>
 
-  <p>📧 Have any questions? Contact us anytime at <a href="mailto:onurcangulpak@gmail.com" className="link-text">onurcangulpak@gmail.com</a>.</p>
+  <p>📧 Have any questions? To contact us <Link to="/contactus"> <a href="contactus-page" className="link-text">click here</a></Link> .</p>
 </div>
 
         </div>

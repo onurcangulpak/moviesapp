@@ -7,7 +7,8 @@
 }
 
 .contact-content { 
-    margin: 30px 15px 30px 15px;
+    margin: 0px 50px 0px 50px;
+
  }
 
 
@@ -16,6 +17,8 @@
     font-size: 24px;
     border-bottom: 1px solid #ffcc00;
     padding-bottom: 10px;
+    margin: 0px 50px 0px 50px;
+
 }
 
 .contact-content p {
@@ -28,6 +31,7 @@
     color: #ffcc00;
     font-size: 18px;
     margin-top: 20px;
+
 }
 
 .contact-content ul {
