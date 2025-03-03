@@ -5,7 +5,10 @@
   align-items: center;
   width: 740px;
   height: 300px;
+  margin-top: 10%;
 }
+
+
 
 .slide {
   border-radius: 0.5rem;
@@ -70,3 +73,4 @@
 .indicator-inactive { 
     background-color: orange;
 }
+

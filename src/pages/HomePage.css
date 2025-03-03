@@ -48,16 +48,14 @@
 }
 
 .categories h3 {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #e0e0e0;
   text-align: center;
   padding-top: 10px;
-  text-align: center;
 }
-
 .categories a:hover {
   color: #DDAA00;
   text-decoration: underline;
@@ -69,10 +67,6 @@
   height: 2px;
   background-color: #DDAA00;
   margin-bottom: 10px;
-}
-
-.carousel {
-  margin-top: 10%;
 }
 
 

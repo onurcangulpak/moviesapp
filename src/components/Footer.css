@@ -11,25 +11,23 @@ h4,
 p {
   color: #fff;
 }
-
 .footer h3 {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
- 
 }
 
 .footer a {
   text-decoration: none;
 }
+
 .footer p {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
   max-width: 1000px;
   text-align: justify;
   margin: 0 20px;
-
-  
 }
+
 .footer-links {
   display: flex;
   flex-direction: column;
